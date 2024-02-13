@@ -1,0 +1,615 @@
+<html>
+
+<head>
+  <!-- <title>Hello Resume</title> -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" type="text/css" href="css/scroll.css"> -->
+  <link rel="stylesheet" type="text/css" href="css/column_scroll.css">
+  <link href='https://fonts.googleapis.com/css?family=Amarante' rel='stylesheet'>
+  <!-- <link rel="stylesheet" type="text/css" href="css/thin_scroll.css"> -->
+  <!-- <link rel="stylesheet" type="text/css" href="css/theme.css"> -->
+  <link rel="stylesheet" type="text/css" href="css/biodata.css">
+  <!-- <link rel="stylesheet" type="text/css" href="css/header.css"> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" type='text/css'>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+</head>
+  <meta name="description" content="Online document editor like interface to create and save Resume">
+  <meta name="keywords"
+    content="resume,cv,maker,creator,generator,nitw,warangal,nit warangal,projects,computer science">
+    <style>
+       table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        border: px solid black;
+        padding: 8px;
+        text-align: left;
+    }
+    
+body {
+  background-color: #d4c8c8;
+  line-height: 1.4em;
+  padding: 0;
+  margin: 0;
+}
+
+#left {
+  background-color: #000000;
+  line-height: 1em;
+}
+#left * {
+  color: #471c1c;
+    font-family: 'Montserrat', sans-serif;
+}
+#left h3 , #left h4 {
+  color: #fff;
+    margin-top: 5px;
+}
+#left .btn {
+  color: #fff;
+}
+#left .btn.btn-default {
+  color: #666;
+}
+
+
+#panel {
+  padding: 5%;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#titleBox * {
+  font-size: 2em;
+}
+#customTemplateOptions {
+  display: none;
+}
+
+
+
+
+#page {
+   width: 720px; 
+   height: 26.7cm;
+  /* width: 21cm; */
+  background-color: white;
+  margin: 1% auto 1% auto;
+  padding: 0.2cm 1.3cm 1cm 1.3cm;
+  box-shadow: 0px 0px 20px 0px #000;
+  line-height: 1.4em;
+  text-align: left;
+ 
+}
+
+
+#page h2 {
+  margin-bottom: 4px;
+}
+#page h5 {
+  margin-top: 2px; margin-bottom: 3px;
+}
+
+a {
+  color: #666;
+}
+a.blue {
+  color: blue;
+  text-decoration: none;
+  border-bottom: 1px dotted blue;
+}
+a.blue:hover {
+  color: blue;
+  text-decoration: none;
+  border-bottom: 1px solid blue;
+}
+
+ul {
+  margin-left: 20px;
+  padding-left: 20px;
+}
+li {
+  margin-top: 1%;
+}
+li li {
+  margin-top: 0.25%;
+}
+
+
+
+.star {
+  margin-top: 5px;
+}
+.light {
+  font-weight: 300;
+}
+.grey {
+  color: #666;
+}
+.borderless { margin-bottom: 0; }
+.half {
+  display: inline-block;
+  width: 49.5%;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.tab {
+  margin-left: 10px;
+}
+
+
+
+#image_box {
+  float: left;
+  margin-top: 25px;
+  margin-left: 5px;
+  margin-right: 15px;
+}
+#info {
+  margin-bottom: 0px;
+  margin-top: auto;
+}
+#contact {
+  text-align: center;
+}
+#contentMinor , #contentBranch {
+  display: none;
+}
+
+
+.table tbody tr td, .table tbody tr th, .table thead tr th {
+  border: none;
+  padding: 0;
+  font-size: 13.5px;
+}
+td {
+  color: #444;
+}
+td.header {
+  color: #333;
+}
+.table.customBordered , .table.customBordered * {
+  border: 0px;
+}
+.table.customBordered {
+  border-top: 1px solid #999;
+  border-left: 1px solid #999;
+}
+.table.customBordered tr {
+  border-bottom: 1px solid #999;
+}
+.table.customBordered tr td {
+  padding: 0px 5px 0px 5px;
+  border-right: 1px solid #999;
+}
+
+
+.section-title h4 { 
+  margin-top: 15px;
+  margin-bottom: 0px;
+}
+.section-title.uppercase h4 {
+  text-transform: uppercase;
+}
+.section-title.shaded h4 {
+  padding: 3px;
+  padding-left: 10px;
+  font-size: 14px;
+  background-color: #ccc !important;
+}
+
+.section-title.ruled.rule-above hr.hr-above {
+  border: 1px solid hsl(0,0%,40%);
+  margin-top: 0px; margin-bottom: 0px;
+}
+.section-title.ruled.rule-above hr.hr-below {
+  border: none;
+  margin: 0px;
+}
+.section-title.ruled.rule-below hr.hr-above {
+  border: none;
+  margin: 0px;
+}
+.section-title.ruled.rule-below hr.hr-below {
+  border: 1px solid hsl(0,0%,40%);
+  margin-top: 2px; margin-bottom: 5px;
+}
+.section-title.shaded hr { 
+  border: none;
+  margin: 0px;
+}
+
+
+.text {
+  color: #444;
+  font-size: 13.5px;
+}
+.time {
+  color: #333;
+  font-style: italic;
+  margin-right: 1px;
+}
+.mentor {
+  font-weight: 300;
+  font-style: italic;
+}
+.link {
+  color: #666;
+  margin-left: 30px;
+  font-weight: 300;
+  font-style: italic;
+  margin-right: 1px;
+}
+
+.no-link .link {
+  display: none;
+}
+
+#sectionProjects .mentor , #sectionProjects .link {
+  display: inline-block;
+}
+#sectionSkills li , #sectionCourses li {
+  margin-top: 0.5%;
+}
+#sectionExperience .title , #sectionExperience .time {
+  display: inline-block;
+}
+#sectionPublications .title , #sectionPublications .time {
+  display: inline-block;
+}
+#sectionProjects .title , #sectionProjects .time {
+  display: inline-block;
+}
+#sectionInterest {
+  display: none;
+}
+#sectionFooterMessage {
+  display: none;
+}
+
+
+
+#page.verdana-sans * {
+  font-family: "Verdana", sans-serif;
+}
+#page.verdana-serif * {
+  font-family: "Verdana", serif;
+}
+#page.roboto * {
+  font-family: 'Roboto', sans-serif;
+}
+#page.droid * {
+  font-family: 'Droid Serif', serif;
+}
+.droid strong , .verdana-sans strong , .verdana-serif strong {
+  font-weight: 700;
+}
+.roboto strong {
+  font-weight: 500;
+}
+.droid .title , .verdana-sans .title , .verdana-serif .title {
+  font-weight: 700;
+}
+.roboto .title {
+  font-weight: 500;
+}
+
+#notice {
+  background-color: #FFC300;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  color: black;
+  text-align: center;
+}
+#notice a {
+  color: #F1C40F;
+}
+#displayImage{
+  position: absolute;
+  margin-top: -105px;
+  margin-left: -40px;
+}
+input[type="file"] { 
+  z-index: -1;
+  position: absolute;
+  opacity: 0;
+  }
+
+  input:focus + label {
+  outline: 2px solid;
+  width: 100px;
+  background-color: #960606;
+  height: 20px;
+  color: red;
+
+  }
+  .test {
+  animation: UpDown 1s linear infinite;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font-size: 4em;
+    cursor: pointer;
+    color: #fa980f;
+
+  }
+  .test img{
+  width: 30px;
+  margin-top: -200px;
+  margin-left: 55px;
+  }
+
+  @keyframes UpDown {
+  0% {
+    bottom: 0;
+  }
+  50% {
+    bottom: .5em;
+  }
+  100% {
+    bottom: 0;
+  }
+  }
+  @media print {
+    #page {
+      background-image: url('/biodata.jpg') !important;
+    }
+  }
+
+  .sourceText li b {
+    margin-right: 200px; /* Adjust this value as needed */
+  }
+  
+  .sourceText li {
+    margin-right: 60px; /* Adjust this value as needed */
+  }
+  
+  /* #shayari1, #shayari2 {
+    color: rgb(212, 255, 0) !important; 
+   
+  }
+ 
+  #dulhaName{
+    color: rgb(212, 255, 0) !important; 
+  }
+  #dulhFatherName{
+    color:white !important; 
+  }
+  #dulhaMataName{
+    color: white !important; 
+  }
+  #weds{
+    color: rgb(0, 136, 255) !important; 
+  }
+  #dulhanName{
+    color: rgb(212, 255, 0) !important; 
+  }
+  #dulhanFatherName{
+    color: white !important; 
+  }
+
+  #dulhanMataName{
+    color: white !important; 
+  }
+  #tilak{
+    color: white !important; 
+  }
+
+  #haldi{
+    color: white !important; 
+  }
+  #vivah{
+    color: white !important; 
+  }
+  #vidai{
+    color: white !important; 
+  }
+  #mob{
+    color: rgb(252, 104, 6) !important; 
+  }
+
+  #owner{
+    color: rgb(10, 255, 51) !important; 
+  }
+  #place{
+    color: rgb(227, 231, 0) !important; 
+  }
+  #functionName{
+    color: rgb(255, 0, 234) !important; 
+  }
+  #address{
+    color: white !important; 
+  }
+  #goog-te-banner-frame {
+    display: none !important;
+ } */
+    </style>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-3 no-print" id="left">
+        <div id="panel">
+          <h3 class="text-center" data-toggle="modal">Resume</h3>
+          <!--   <button class="btn btn-block btn-primary" data-toggle="modal" data-target="#usageModal">VIEW INSTRUCTIONS</button> -->
+          <button class="btn btn-block btn-success" onclick="window.print()">PRINT AS PDF</button>
+          <hr>
+          <input type="file" id="imageUpload" accept="image/*" onchange="previewImage(event)"><br>
+          <label for="imageUpload">Upload Image</label><br>
+        
+          <button class="translateButton">Translate</button>
+          <div class="test">
+            <img src="https://cdn-icons-png.flaticon.com/128/1634/1634156.png" alt="">
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-sm-9 text-center" id="right">
+
+        <div id="page" class="droid">
+          <div class="row" style="margin-bottom:10px;">
+            <div class="col-sm-12">
+<!-- ======================= start design =============================================================== -->
+        
+          <div class="section" id="biodata" style="margin-top: 180px; text-align: center;font-style: inherit;  font-size: 30px;">
+            <div class="section-title ruled rule-above">
+            </div>
+            <strong><span class="sourceText" id="biodata" contenteditable="true">Bio Data</span></strong>
+          </div>
+          <div class="section" id="headingBiodata" style="margin-top: 30px; font-style: inherit;  font-size: 20px;">
+            <div class="section-title ruled rule-above">
+            </div>
+            <span class="sourceText" id="headingBiodata" contenteditable="true"><strong>PERSONAL PROFILE</strong</span>
+          </div>
+        
+          <table>
+            <tr>
+              <th class="sourceText">Name</th>
+              <td>:</td>
+              <td contenteditable="true" class="sourceText">Ayushi Gupta</td>
+          </tr>
+          <tr>
+              <th class="sourceText">Father's Name</th>
+              <td>:</td>
+              <td contenteditable="true" class="sourceText">Developer Gupta</td>
+          </tr>
+          <tr>
+              <th class="sourceText">Mother's Name</th>
+              <td>:</td>
+              <td contenteditable="true" class="sourceText">Coding Devi</td>
+          </tr>
+          <tr>
+              <th class="sourceText">Date of Birth</th>
+              <td>:</td>
+              <td contenteditable="true" class="sourceText">20-08-2024</td>
+          </tr>
+          <tr>
+              <th class="sourceText">Height</th>
+              <td>:</td>
+              <td contenteditable="true" class="sourceText">5.2 feet</td>
+          </tr>
+          <tr>
+              <th class="sourceText">Colour</th>
+              <td>:</td>
+              <td contenteditable="true" class="sourceText">Pink</td>
+          </tr>
+          <tr>
+              <th class="sourceText">Hobbies</th>
+              <td>:</td>
+              <td contenteditable="true" class="sourceText">Music</td>
+          </tr>
+          <tr>
+              <th class="sourceText">Languages Known</th>
+              <td>:</td>
+              <td contenteditable="true" class="sourceText">Hindi, English</td>
+          </tr>
+          <tr>
+              <th class="sourceText">Occupation</th>
+              <td>:</td>
+              <td contenteditable="true" class="sourceText">Student</td>
+          </tr>
+          <tr>
+              <th class="sourceText">Education Qualification</th>
+              <td>:</td>
+              <td contenteditable="true" class="sourceText">RGPV Bhopal, inodre</td>
+          </tr>
+          <tr>
+              <th class="sourceText">Address</th>
+              <td>:</td>
+              <td contenteditable="true" class="sourceText">Buxar Bihar</td>
+          </tr>
+          <tr>
+              <th class="sourceText">Mobile</th>
+              <td>:</td>
+              <td contenteditable="true" class="sourceText">9087688754</td>
+          </tr>
+          <tr>
+              <th class="sourceText">Family</th>
+              <td>:</td>
+              <td contenteditable="true" class="sourceText">brother, sister, uncle, aunty</td>
+          </tr>
+        </table>
+          <div id="displayImage"><br>
+        
+<!-- ======================= start design =============================================================== -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  <!-- <script type="text/javascript" src="js/header.js"></script> -->
+
+  <script>
+
+    function previewImage(event) {
+      const file = event.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          const imgPreview = document.createElement('img');
+          imgPreview.src = e.target.result;
+          imgPreview.style.width = '130px';
+          imgPreview.style.height = '140px';
+          imgPreview.id = 'uploadedImage';
+          const imageContainer = document.getElementById('displayImage');
+          const existingImage = document.getElementById('uploadedImage');
+          if (existingImage) {
+            imageContainer.replaceChild(imgPreview, existingImage);
+          } else {
+            imageContainer.appendChild(imgPreview);
+          }
+        }
+        reader.readAsDataURL(file);
+      }
+    }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var div = document.getElementById('page');
+    var imageUrl = '/biodata.jpg';
+    div.style.backgroundImage = 'url(' + imageUrl + ')';
+    var width = '600px'; // Set your desired width here
+    var height = '29.7cm';
+    // div.style.backgroundSize = width + ' ' + height;
+  });
+  </script>
+
+<script>
+ function translate() {
+   $('.sourceText').each(function() {
+   var sourceText = $(this).text();
+   var sourceLang = 'en';
+   var targetLang = 'hi';
+   var url = "https://translate.googleapis.com/translate_a/single?client=gtx&sl="+ sourceLang + "&tl=" + targetLang + "&dt=t&q=" + encodeURI(sourceText);
+  
+   var spanElement = $(this);
+   $.getJSON(url, function(data) {
+       spanElement.text(data[0][0][0]);
+   });
+});
+}
+
+$(document).ready(function() {
+   $('.translateButton').on('click', translate);
+
+
+});
+</script>
+</body>
